@@ -1,0 +1,33 @@
+version: 0.1
+component: build
+timeoutInSeconds: 6000
+runAs: root
+shell: bash
+env:
+variables:
+  "testEnv" : "testValue1"
+exportedVariables:
+  - testEnv
+ 
+# inputArtifacts:
+# - name: hello-dev-jar
+# location: hello123.class
+ 
+steps:
+- type: Command
+  name: "Build pipelines-java"
+  timeoutInSeconds: 400
+  command: |
+    mvn clean install
+    echo "Build Done"
+  onFailure:
+    - type: Command
+      timeoutInSeconds: 400
+      command: |
+        echo "Handling Failure"
+        echo "Failure successfully handled"
+ 
+outputArtifacts:
+- name: helloworld.war
+  type: BINARY
+  location: target/hellowworld.war
