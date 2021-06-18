@@ -30,4 +30,4 @@ steps:
 outputArtifacts:
 - name: helloworld.war
   type: BINARY
-  location: target/hellowworld.war
+  location: target/helloworld.war
