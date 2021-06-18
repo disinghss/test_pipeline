@@ -4,8 +4,8 @@ timeoutInSeconds: 6000
 runAs: root
 shell: bash
 env:
-variables:
-  "testEnv" : "testValue1"
+#variables:
+# "testEnv" : "testValue1"
 exportedVariables:
   - testEnv
  
