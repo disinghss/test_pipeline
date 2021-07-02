@@ -30,6 +30,6 @@ steps:
         echo "Failure successfully handled"
  
 outputArtifacts:
-- name: helloworld.war
+- name: helloworld
   type: BINARY
   location: target/helloworld.war
