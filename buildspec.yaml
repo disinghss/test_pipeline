@@ -6,8 +6,8 @@ shell: bash
 env:
 #variables:
 # "testEnv" : "testValue1"
-#exportedVariables:
-#  - testEnv
+ exportedVariables:
+  - version
  
 # inputArtifacts:
 # - name: hello-dev-jar
@@ -19,6 +19,7 @@ steps:
   name: "Build pipelines-java"
   timeoutInSeconds: 400
   command: |
+    version=2.0
     mvn clean install
     echo "Build Done"
   onFailure:
