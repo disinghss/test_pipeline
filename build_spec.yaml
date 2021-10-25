@@ -20,7 +20,7 @@ steps:
   timeoutInSeconds: 6000
   command: |
     version=2.0
-    sleep 600
+    sleep 120
     mvn clean install
     echo "Build Done"
   onFailure:
