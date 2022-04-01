@@ -1,3 +1,8 @@
+box: 
+  id: node:latest
+  ports: 
+    - "8080"
+
 build:
   # The steps that will be executed on build
   steps:
